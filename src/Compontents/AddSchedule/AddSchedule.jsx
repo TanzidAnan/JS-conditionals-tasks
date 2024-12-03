@@ -27,7 +27,20 @@ const AddSchedule = () => {
         const formattedData=startDate.toLocaleDateString("en-CA")
         const title =form.title.value;
         const day =form.day.value;
-        console.log(formatHour,formattedData,title,day)
+      
+        const data ={title,day,formatHour,formattedData}
+        console.log(data);
+        fetch('http://localhost:5000/schedule',{
+            method:'POST',
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(data)
+        })
+        .then(res =>res.json())
+        .then(data =>{
+            console.log(data)
+        })
     }
 
 
