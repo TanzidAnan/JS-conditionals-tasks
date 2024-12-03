@@ -2,6 +2,7 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import Swal from "sweetalert2";
 
 const formetTime12Hours =(data) =>{
     let hours =data.getHours()
@@ -40,6 +41,15 @@ const AddSchedule = () => {
         .then(res =>res.json())
         .then(data =>{
             console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your work has been saved",
+                    showConfirmButton: false,
+                    timer: 1000
+                  });
+            }
         })
     }
 
