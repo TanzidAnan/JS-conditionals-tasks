@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 import Root from "../Root/Root"
 import Home from "../Home/Home"
 import AddSchedule from "../AddSchedule/AddSchedule"
+import Selectede from "../Selectede/Selectede"
 
 const router =createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router =createBrowserRouter([
             {
                 path:'/addSchedule',
                 element:<AddSchedule></AddSchedule>
+            },
+            {
+                path:'/selectede',
+                element:<Selectede></Selectede>
             }
         ]
     }

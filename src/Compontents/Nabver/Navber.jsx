@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 const Navber = () => {
 
     const links =<>
-    <li><Link to='/'>Item 1</Link></li>
+    <li><Link to='/'>Home</Link></li>
     <li><Link to='/addSchedule'>Item 1</Link></li>
+    <li><Link to='/selectede'>All Schedule</Link></li>
 
     </>
 
