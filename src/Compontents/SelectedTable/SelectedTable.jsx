@@ -12,7 +12,7 @@ const SelectedTable = ({ data }) => {
                 <td>{formatHour}</td>
                 <td>{formattedData}</td>
                 <td>
-                    <button></button>
+                    <button><i className="fa-solid fa-pen-to-square"></i></button>
                 </td>
             </tr>
         </div>
