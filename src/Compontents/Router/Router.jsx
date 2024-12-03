@@ -19,7 +19,8 @@ const router =createBrowserRouter([
             },
             {
                 path:'/selectede',
-                element:<Selectede></Selectede>
+                element:<Selectede></Selectede>,
+                loader:() => fetch('http://localhost:5000/schedule')
             }
         ]
     }
