@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useLoaderData } from "react-router-dom";
 import SelectedTable from "../SelectedTable/SelectedTable";
 
@@ -26,7 +27,7 @@ const Selectede = () => {
                         </table>
                         <tbody>
                             {
-                              AllData.length===0?<p>No data found</p> :AllData.map(data => <SelectedTable key={data._id} data={data}></SelectedTable>) 
+                              AllData.length===0?<p>No data found</p> :AllData.map((data,index) => <SelectedTable  key={data._id} idx={index} data={data}></SelectedTable>) 
                             }
                         </tbody>
                     </div>
