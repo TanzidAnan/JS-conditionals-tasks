@@ -1,5 +1,6 @@
 
 const SelectedTable = ({data}) => {
+    console.log(data)
     const isCompleted =true
     return (
         <div>
