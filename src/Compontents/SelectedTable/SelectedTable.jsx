@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 const SelectedTable = ({ data,idx,setSeduleData,seduleData }) => {
     const { _id,day, formatHour, formattedData, title } = data
     console.log(data);
@@ -24,7 +26,9 @@ const SelectedTable = ({ data,idx,setSeduleData,seduleData }) => {
                 <td>{formatHour}</td>
                 <td>{formattedData}</td>
                 <td className="flex gap-6">
+                    <Link to={`/update/${_id}`}>
                     <button className="btn"><i className="fa-solid fa-pen-to-square"></i></button>
+                    </Link>
                     <button onClick={() =>hendleDelete(_id)} className="btn"><i className="fa-solid fa-trash"></i></button>
                     <button className="btn"><i className="fa-solid fa-check"></i></button>
                 </td>
