@@ -58,7 +58,7 @@ const AddSchedule = () => {
     return (
         <div className="w-9/12 mx-auto">
             <div>
-                
+                <p className="text-center text-3xl font-semibold py-5">Add Gym Schedule</p>
             </div>
             <form onSubmit={hendleAddSchedule} className="card-body">
                 <div className="flex gap-4">
