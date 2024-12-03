@@ -11,7 +11,9 @@ const SelectedTable = ({ data }) => {
                 <td>{day}</td>
                 <td>{formatHour}</td>
                 <td>{formattedData}</td>
-
+                <td>
+                    <button></button>
+                </td>
             </tr>
         </div>
     );
