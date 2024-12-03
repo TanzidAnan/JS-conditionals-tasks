@@ -1,11 +1,13 @@
 /* eslint-disable no-undef */
 import { useLoaderData } from "react-router-dom";
 import SelectedTable from "../SelectedTable/SelectedTable";
+import { useState } from "react";
 
 const Selectede = () => {
 
     const AllData =useLoaderData();
     console.log(AllData)
+    const [seduleData,setSeduleData] =useState(AllData)
 
     return (
         <div className="w-9/12 mx-auto">
@@ -27,7 +29,10 @@ const Selectede = () => {
                         </table>
                         <tbody>
                             {
-                              AllData.length===0?<p>No data found</p> :AllData.map((data,index) => <SelectedTable  key={data._id} idx={index} data={data}></SelectedTable>) 
+                              seduleData.length===0?<p>No data found</p> :seduleData.map((data,index) => <SelectedTable  key={data._id} idx={index}
+                              setSeduleData={setSeduleData}
+                              seduleData={seduleData}
+                              data={data}></SelectedTable>) 
                             }
                         </tbody>
                     </div>
