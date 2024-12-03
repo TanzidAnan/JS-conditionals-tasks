@@ -56,7 +56,10 @@ const AddSchedule = () => {
 
 
     return (
-        <div>
+        <div className="w-9/12 mx-auto">
+            <div>
+                
+            </div>
             <form onSubmit={hendleAddSchedule} className="card-body">
                 <div className="flex gap-4">
                     <div className="form-control w-1/2">
