@@ -12,8 +12,9 @@ const SelectedTable = ({ data,idx }) => {
                 <td>{day}</td>
                 <td>{formatHour}</td>
                 <td>{formattedData}</td>
-                <td>
+                <td className="flex gap-6">
                     <button><i className="fa-solid fa-pen-to-square"></i></button>
+                    <button><i className="fa-solid fa-trash"></i></button>
                 </td>
             </tr>
         </div>
