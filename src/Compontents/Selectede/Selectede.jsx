@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import SelectedTable from "../SelectedTable/SelectedTable";
 
 const Selectede = () => {
 
@@ -23,7 +24,11 @@ const Selectede = () => {
                                 </tr>
                             </thead>
                         </table>
-                        <tbody></tbody>
+                        <tbody>
+                            {
+                              AllData.length===0?<p>No data found</p> :AllData.map(data => <SelectedTable key={data._id} data={data}></SelectedTable>) 
+                            }
+                        </tbody>
                     </div>
                 </div>
             </div>

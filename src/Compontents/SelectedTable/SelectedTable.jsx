@@ -1,5 +1,5 @@
 
-const SelectedTable = () => {
+const SelectedTable = ({data}) => {
     const isCompleted =true
     return (
         <div>
