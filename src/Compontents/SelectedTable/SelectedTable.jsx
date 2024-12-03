@@ -1,15 +1,17 @@
 
-const SelectedTable = ({data}) => {
+const SelectedTable = ({ data }) => {
+    const { day, formatHour, formattedData, title } = data
     console.log(data)
-    const isCompleted =true
+    const isCompleted = true
     return (
         <div>
-            <tr>
+            <tr className="flex gap-20">
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{title}</td>
+                <td>{day}</td>
+                <td>{formatHour}</td>
+                <td>{formattedData}</td>
+
             </tr>
         </div>
     );
